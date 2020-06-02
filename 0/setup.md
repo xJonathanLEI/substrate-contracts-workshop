@@ -23,15 +23,14 @@ If you are using another operating system, like __Windows__, follow the [install
 
 We need to use a Substrate node with the built-in Contracts module. For this workshop we'll use the pre-designed Substrate Node.
 
-> IMPORTANT: There are changes in the latest Rust compiler which break Substrate compilation.
-> For this tutorial we recommend to build the Subtrate node-cli binary using `nightly-2020-04-01`.
+> **IMPORTANT:** There are changes in the latest Rust compiler which break Substrate compilation.
+> For this tutorial we recommend to build the Subtrate node-cli binary using `nightly-2020-04-19`.
 ```
-rustup install nightly-2020-04-01
-rustup target add wasm32-unknown-unknown --toolchain nightly-2020-04-01
+rustup install nightly-2020-04-19
+rustup target add wasm32-unknown-unknown --toolchain nightly-2020-04-19
 ```
-
 ```bash
-cargo +nightly-2020-04-01 install node-cli --git https://github.com/paritytech/substrate.git --tag v2.0.0-alpha.6 --force
+cargo +nightly-2020-04-19 install node-cli --git https://github.com/paritytech/substrate.git --tag v2.0.0-alpha.6 --force
 ```
 
 

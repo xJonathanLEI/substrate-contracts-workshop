@@ -27,6 +27,19 @@ Settings > remote node/endpoint to connect to > Local Node (Own, 127.0.0.1:9944)
 
 ![An image of the settings in Polkadot-JS Apps UI](./assets/polkadot-js-settings.png)
 
+> **IMPORTANT:** There are new data types in the latest substrate binary. This tutorial uses a slightly older version `alpha.6`
+> which requires data type defintions.
+
+```
+Settings > Developer
+```
+```
+{
+  "Address": "AccountId",
+  "LookupSource": "AccountId",
+  "Weight": "u32"
+}
+```
 If you go into the **Explorer** tab of the UI, you should also see blocks being produced!
 
 ![An image of the Substrate UI](./assets/start-substrate-ui.png)
