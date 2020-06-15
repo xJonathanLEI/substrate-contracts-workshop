@@ -21,7 +21,7 @@ If you are using another operating system, like __Windows__, follow the [install
 
 ## Installing A Substrate Node
 
-We need to use a Substrate node with the built-in Contracts module. For this workshop we'll use the pre-designed Substrate Node Client.
+We need to use a Substrate node with the built-in Contracts module. For this workshop we'll use the pre-designed Substrate node client.
 ```bash
 cargo install node-cli --git https://github.com/paritytech/substrate.git --force
 ```

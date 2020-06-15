@@ -7,13 +7,13 @@ Now that your contract has been fully deployed, we can start to interact with it
 
 If you take a look back at our contract's `on_deploy()` function, we set the initial value of the Flipper contract to `false`. Let's check that this is the case.
 
-In the **Contracts** section, press the "execute" button:
+In the **Contracts** section, press the **"execute"** button:
 
-![An image of the Contracts call page](./assets/flipper-call-page.png)
+![An image of the Contracts call page](./assets/send-as-rpc.png)
 
-Set the _message to send_ to `get(): bool`. Set the _maximum gas allowed_ to `500,000`.
+Set the _message to send_ to `get(): bool`. Set the _maximum gas allowed_ to `1,000,000`.
 
-When you press "Call" you will see it returns the value `false`:
+When you press **"Call"** you will see it returns the value `false`:
 
 ![An image of Flipper RPC call with false](./assets/flipper-false.png)
 
@@ -25,7 +25,9 @@ When you press "Call" you will see it returns the value `false`:
 
 So let's make the value turn `true` now!
 
-The alternative _message to send_ we can make with the UI is `flip()`. Again, set the _maximum gas allowed_ to `500,000`.
+The alternative _message to send_ we can make with the UI is `flip()`. Again, set the _maximum gas allowed_ to `1,000,000`.
+
+![An image of the Contracts extrinsic page](./assets/send-as-transaction.png)
 
 You will notice that this call actually sends a transaction. If the transaction was successful, we should then be able to go back to the `get()` function and see our updated storage:
 

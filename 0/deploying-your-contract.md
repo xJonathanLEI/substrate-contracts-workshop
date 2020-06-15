@@ -20,28 +20,30 @@ With your Substrate development node running, you can go back to the [Polkadot U
 
 Open the specially designed **Contracts** section of the UI.
 
-In the **Code** section, select "Upload Wasm".
+In the **Code** section, select **"Upload Wasm"**.
 
-In the popup, select a _deployment account_ with some account balance, like `Alice`. In _compiled contract WASM_, select the `flipper.wasm` file we generated. For the _contract ABI_, select the JSON file. Finally, set the _maximum gas allowed_ to `500,000` units.
+In the popup, select a _deployment account_ with some account balance, like `Alice`. In _compiled contract WASM_, select the `flipper.wasm` file we generated. For the _contract's metadata_, select the JSON file.
 
 ![Contracts code page for deploying Flipper](./assets/flipper-code-page.png)
 
-After you press **Upload** and a new block is formed, a system event is emitted with `contracts.PutCode queued`. This means that the UI is waiting for you to `Sign and Submit` the extrinsic. If the transaction succeeds you will get an `system.ExtrinsicSuccess` event and your WASM contract will be stored on your Substrate blockchain!
+After you press **Upload** and **Sign and Submit** the extrinsic, a new block is formed and a system event is emitted with `contracts.PutCode`. If the transaction succeeds you will get an `system.ExtrinsicSuccess` event and your WASM contract will be stored on your Substrate blockchain!
 
-> **Note:** If you get a `system.ExtrinsicFailed` error message, you may not have allowed enough gas to execute the call.  You can verify that this is the cause by looking at the logs in the terminal. This may occur on this or any subsequent contract instantiations or calls.  If this occurs, increase the _maximum gas allowed_ argument and try again.
+![An image of events from Flipper code upload](./assets/flipper-upload-events.png)
+
+> **Note:** If you get a `system.ExtrinsicFailed` error message, you may not have allowed enough gas to execute the call.  You can verify that this is the cause by looking at the logs in the terminal. This may occur on this or any subsequent contract instantiations or calls.
 
 ## Creating an Instance of Your Contract
 
 Smart contracts exist as an extension of the account system on the blockchain. Thus creating an instance of this contract will create a new `AccountId` which will store any balance managed by the smart contract and allow us to interact with the contract.
 
-You will notice on the **Code** tab there is a new object that represents our smart contract. We now need to deploy our smart contract to create an **instance**. Press the "Deploy" button on the flipper contract.
+You will notice on the **Code** tab there is a new object that represents our smart contract. We now need to deploy our smart contract to create an **instance**. Press the **"Deploy"** button on the flipper contract.
 
-To instantiate our contract we just need to give this contract account an _endowment_ of `1,000` in order to pay the storage rent and again set the _maximum gas allowed_ to default value(`100000000000`) units:
+To instantiate our contract we just need to give this contract account an _endowment_ of `1,000,000` in order to pay the storage rent and again set the _maximum gas allowed_ to default value(`1,000,000`) units:
 
 ![An image of the Contracts Instance Page](./assets/flipper-instance-page.png)
 
 > **Note:** As mentioned earlier, contract creation involves creation of a new Account. As such, you must be sure to give the contract account at least the existential deposit defined by your blockchain. We also need to be able to pay the contract's rent (_`endowment`_). If we consume all of this deposit, the contract will become invalid. We can always refill the contract's balance and keep it on chain.
 
-When you press **Deploy**, you should see a flurry of events appear including the creation of a new account (`balances.NewAccount`) and the instantiation of the contract (`contracts.instantiate`):
+When you press **Deploy**, you should see a flurry of events appear including the creation of a new account (`system.NewAccount`) and the instantiation of the contract (`contracts.instantiate`):
 
 ![An image of events from instantiation of Flipper](./assets/flipper-instance-events.png)
