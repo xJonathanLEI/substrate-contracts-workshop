@@ -14,7 +14,7 @@ But first, we will go over the ERC20 standard for those of you who are not famil
 
 ## ERC20 Standard
 
-The [ERC20 token standard](https://theethereum.wiki/w/index.php/ERC20_Token_Standard) defines the interface for the most popular Ethereum smart contract.
+The [ERC20 token standard](https://eips.ethereum.org/EIPS/eip-20) defines the interface for the most popular Ethereum smart contract.
 
 ```javascript
 // ----------------------------------------------------------------------------

@@ -42,8 +42,6 @@ Note that all public functions must use the `#[ink(message)]` attribute.
 
 Without going into so much detail, storage values are a part of the underlying ink! core layer. In the background, they use a more primitive `cell` type which holds an `Option<T>`. When we try to get the value from storage, we `unwrap` the value, which is why it panics if it is not initialized!
 
-From [core/storage/value.rs](https://github.com/paritytech/ink/blob/master/core/src/storage/value.rs):
-
 ```rust
 impl<T> Value<T>
 where

@@ -14,5 +14,3 @@ We will cover:
 8. Creating a more complex ERC20 contract.
 
 We would love for you to give feedback in these early stages, so open an issue or a PR!
-
-# [Let's go!](/0/introduction.md)
