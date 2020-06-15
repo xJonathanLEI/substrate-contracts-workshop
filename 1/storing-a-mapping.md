@@ -21,7 +21,7 @@ This means that for a given key, you can store a unique instance of a value type
 
 ## Storage HashMap API
 
-You can find the full HashMap API in the [core/storage/collections/hashmap](https://github.com/paritytech/ink/blob/master/core/src/storage/collections/hash_map/impls.rs) part of ink!.
+You can find the full HashMap API in the [core/src/storage2/collections/hashmap](https://github.com/paritytech/ink/blob/master/core/src/storage2/collections/hashmap/impls.rs) part of ink!.
 
 Here are some of the most common functions you might use:
 
