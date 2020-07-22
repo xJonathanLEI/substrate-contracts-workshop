@@ -23,7 +23,7 @@ If you are using another operating system, like __Windows__, follow the [install
 
 We need to use a Substrate node with the built-in Contracts module. For this workshop we'll use the pre-designed Substrate node client.
 ```bash
-cargo install node-cli --git https://github.com/paritytech/substrate.git --tag v2.0.0-rc4 --force
+cargo install node-cli --git https://github.com/paritytech/substrate.git --tag v2.0.0-rc4 --force --locked
 ```
 
 ## ink! CLI

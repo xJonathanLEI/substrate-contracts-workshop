@@ -27,6 +27,14 @@ Settings > remote node/endpoint to connect to > Local Node (Own, 127.0.0.1:9944)
 
 ![An image of the settings in Polkadot-JS Apps UI](./assets/polkadot-js-settings.png)
 
+>**Important:** The UI needs a data type override for **v2.0.0-rc4** and older versions. The contracts pallet (SEAL) is getting some breaking changes to adjust it for the next version of ink!
+>Go to **Settings > Developer** and define the type override.
+```JSON
+{
+  "ContractExecResult": "ContractExecResultTo255"
+}
+```
+
 If you go into the **Explorer** tab of the UI, you should also see blocks being produced!
 
 ![An image of the Substrate UI](./assets/start-substrate-ui.png)
