@@ -33,7 +33,7 @@ The final tool we will be installing is the ink! command line utility which will
 You can install the utility using Cargo with:
 
 ```bash
-cargo install cargo-contract --vers 0.6.1 --force
+cargo install cargo-contract --vers 0.6.2 --force
 ```
 
 You can then use `cargo contract --help` to start exploring the commands made available to you.
