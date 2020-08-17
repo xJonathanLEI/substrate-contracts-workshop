@@ -22,7 +22,7 @@ https://polkadot.js.org/apps/
 To point the UI to your local node, you need to adjust the **Settings**. Just select 'Local Node (127.0.0.1:9944)' from the endpoint dropdown:
 
 ```
-Settings > remote node/endpoint to connect to > Local Node (Own, 127.0.0.1:9944)
+Click on the chain name > Development node/endpoint to connect to > Local Node (127.0.0.1:9944) > Switch 🗘
 ```
 
 ![An image of the settings in Polkadot-JS Apps UI](./assets/polkadot-js-settings.png)
