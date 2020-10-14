@@ -57,21 +57,6 @@ You can see that this file describes all the interfaces that can be used to inte
 
 If you look close at the constructors and messages, you will also notice a `selector` which is a 4-byte hash of the function name and is used to route your contract calls to the correct functions.
 
-Polkadot-JS Apps uses this file to generate a friendly interface for deploying and interacting with your contract. :)
+The Canvas UI uses this file to generate a friendly interface for deploying and interacting with your contract. :)
 
-In the next section we will start a Substrate node and configure the Polkadot-JS Apps UI to interact with it.
-
----
-
-**Learn More**
-
-ink! provides a built-in overflow protection enabled on our `Cargo.toml` file. It is __recommended__ to keep it enabled to prevent potential overflow errors in your contract.
-```
-[profile.release]
-panic = "abort"           <-- Panics shall be treated as aborts: reduces binary size
-lto = true                <-- enable link-time-optimization: more efficient codegen
-opt-level = "z"           <-- Optimize for small binary output
-overflow-checks = true    <-- Arithmetic overflow protection
-```
-
----
+In the next section we will start a Canvas node and configure the Canvas UI to interact with it.
