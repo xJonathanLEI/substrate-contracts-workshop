@@ -11,7 +11,7 @@ Substrate Developer Hub Knowledge Base.
 
 ```
 rustup component add rust-src --toolchain nightly
-rustup target add wasm32-unknown-unknown --toolchain stable
+rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
 
 ## Installing The Canvas Node
